@@ -24,9 +24,7 @@ module.exports = function (app) {
     
     .post(booksController.postBook)
     
-    .delete(function(req, res){
-      //if successful response will be 'complete delete successful'
-    });
+    .delete(booksController.deleteAllBooks);
 
 
 
@@ -35,9 +33,6 @@ module.exports = function (app) {
     
     .post(booksController.postComment)
     
-    .delete(function(req, res){
-      var bookid = req.params.id;
-      //if successful response will be 'delete successful'
-    });
+    .delete(booksController.deleteBook);
   
 };
